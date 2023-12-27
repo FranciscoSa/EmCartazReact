@@ -1,0 +1,43 @@
+header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+}
+
+#contentBox {
+    display: flexbox;
+    width: 90%;
+}
+
+#headerTitle {
+    color: aliceblue;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    float:left;
+}
+
+#buttonSeeLater {
+    color: aliceblue;
+    background-color: blue;
+    padding: 8px;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    float:right;
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    transition: 500ms;
+}
+
+#buttonSeeLater:hover{
+    color: blue;
+    background-color:aliceblue;
+}
