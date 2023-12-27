@@ -1,7 +1,9 @@
+import RouterAPP from "./router/RouterApp";
+
 function App() {
   return (
     <div className="App">
-      <h1> Start Project</h1>
+      <RouterAPP />
     </div>
   );
 }
