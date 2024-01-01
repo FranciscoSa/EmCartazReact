@@ -1,17 +1,12 @@
 header {
-    margin: 0;
-    padding: 0;
-    display: flex;
+    margin: 0px;
+    padding: 2%;
     width: 100%;
     height: 60px;
-    background-color: blue;
+    display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-#contentBox {
-    display: flexbox;
-    width: 90%;
+    justify-content: space-between;
+    background: brown;
 }
 
 #headerTitle {
@@ -20,24 +15,21 @@ header {
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
-    float:left;
 }
 
 #buttonSeeLater {
     color: aliceblue;
-    background-color: blue;
+    background-color: brown;
     padding: 8px;
     font-size: medium;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
-    float:right;
     border: 2px solid aliceblue;
-    border-radius: 10px;
     transition: 500ms;
 }
 
 #buttonSeeLater:hover{
-    color: blue;
+    color: brown;
     background-color:aliceblue;
 }

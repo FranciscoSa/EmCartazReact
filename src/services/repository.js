@@ -16,6 +16,6 @@ export async function getMoviesList(page) {
             page: page
         }
     });
-
-    return response
+    
+    return response.data.results
 }

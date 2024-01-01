@@ -1,0 +1,57 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    display: block; 
+}
+
+.container {
+    margin: 0 auto;
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 98%;
+    text-align: center;
+    
+}
+
+.movieBox {
+    flex: 1 1 300px;
+    margin: 1%;
+    border-radius: 2%;
+    padding: 5px;
+    background-color: rgba(133, 116, 116, 0.185);
+    box-shadow: 1px 1px 20px rgba(82, 75, 75, 0.507);
+}
+
+.movieTitle {
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    font-weight: bold;
+    text-overflow: ellipsis;
+}
+
+.movieImage {
+    margin: 10px 0 5px 0;
+}
+
+.movieButton {
+    color: brown;
+    min-width: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.movieButton:hover{
+    color: aliceblue;
+    background-color:brown;
+    border: 2px soliD brown;
+}
