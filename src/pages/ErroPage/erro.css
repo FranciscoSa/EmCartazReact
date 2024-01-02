@@ -1,0 +1,35 @@
+.containerError {
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerError > h1 {
+    font-size: 130px;
+    color: brown;
+}
+
+.containerError > strong {
+    color: brown;
+}
+
+.containerError > a {
+    color: aliceblue;
+    background-color: brown;
+    margin-top: 15px;
+    padding: 10px 10%;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    border: 2px solid aliceblue;
+    transition: 500ms;
+}
+
+.containerError > a:hover {
+    color: aliceblue;
+    background-color: rgba(165, 42, 42, 0.74);
+}

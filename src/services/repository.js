@@ -19,3 +19,12 @@ export async function getMoviesList(page) {
     
     return response.data.results
 }
+
+export async function getDetailMovie(id) {
+    const response = await BaseApi.get(`movie/${id}`, {
+        params: {
+            api_key: "146e18d192e063b3f30d264301c8cb27",
+            language: "pt-BR"
+        }
+    });
+}

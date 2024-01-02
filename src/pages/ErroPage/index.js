@@ -1,6 +1,13 @@
+import { Link } from "react-router-dom";
+import "./erro.css"
+
 function ErrorPage(){
     return(
-        <h1>Pagina não encontrada !!</h1>
+        <div className="containerError">
+             <h1> 404 </h1>
+             <strong> Pagina não encontrada !!!</strong>
+             <Link className="homeButton" to="/"> Ir para Home </Link>
+        </div>
     );
 }
 
