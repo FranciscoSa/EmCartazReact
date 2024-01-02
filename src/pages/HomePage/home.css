@@ -4,11 +4,6 @@ body {
     width: 100%;
 }
 
-img {
-    max-width: 100%;
-    display: block; 
-}
-
 .container {
     margin: 0 auto;
     margin-top: 1%;
@@ -20,7 +15,7 @@ img {
 }
 
 .movieBox {
-    flex: 1 1 300px;
+    flex: 1 1 400px;
     margin: 1%;
     border-radius: 2%;
     padding: 5px;
@@ -32,26 +27,33 @@ img {
     max-width: 90%;
     white-space: nowrap;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 10px auto;
     font-weight: bold;
     text-overflow: ellipsis;
+    color: brown;
 }
 
 .movieImage {
-    margin: 10px 0 5px 0;
+    margin: 10px auto 0px auto;
+    max-width: 100%;
+    display: block;
 }
 
 .movieButton {
-    color: brown;
-    min-width: 90%;
-    border: 2px solid rgb(0, 0, 0);
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto 2% auto;
     font-weight: bold;
     text-decoration: none;
     transition: 500ms;
+    color: aliceblue;
+    background-color:brown;
+    
 }
 
 .movieButton:hover{
     color: aliceblue;
-    background-color:brown;
-    border: 2px soliD brown;
+    background-color: rgba(165, 42, 42, 0.5);
 }
