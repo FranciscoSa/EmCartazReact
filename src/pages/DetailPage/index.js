@@ -20,15 +20,17 @@ function DetailPage(){
     if (loading) {
         return (
             <div className='loadContainer'>
-                <h1>Carregando Filmes ...</h1>
+                <h1> Carregando Filmes ... </h1>
             </div>
         );
+    } else if (movieDetail.id === 'erro') {
+       
     }
 
     return(
         <div className="detailContainer">
 
-            <img id="movieImage" src={`https://image.tmdb.org/t/p/original/${ movieDetail.backdrop_path }`} alt= {movieDetail.title} />
+            <img id="movieImage" src={ movieDetail.url } alt= {movieDetail.title} />
             
             <div className="infoContainer">
 
