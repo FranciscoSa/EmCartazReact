@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.detailContainer {
+    width: 100%;
+    margin: 2% auto;
+    display: flex;
+}
+
+#movieImage {
+    margin: 1% ;
+    max-width: 60%;
+    display: block;
+    flex: 1 1 400px;
+    border-radius: 2%;
+    padding: 5px;
+    background-color: rgba(133, 116, 116, 0.185);
+    box-shadow: 1px 1px 20px rgba(82, 75, 75, 0.507);
+}
+
+.infoContainer {
+    margin: 1% 1% 1% 0 ;
+    max-width: 40%;
+}
+
+.infoContainer > p {
+    margin: 5% 1% 1% 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align:justify;
+}
+
+#titleGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#titleGroup > h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+#titleGroup > h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#movieGenres {
+    margin: 1% 1% 1% 0;
+}
+
+#movieGenres > strong {
+    margin: 0 1% 0 0;
+    padding: 1%;
+    font-size: 12px;
+    color: aliceblue;
+    background-color:brown;
+}

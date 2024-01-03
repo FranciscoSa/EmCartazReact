@@ -5,7 +5,7 @@ import "./home.css";
 
 function Home() {
     const [movies, setMovies] = useState([]);
-    const [page, setPage] = useState(21);
+    const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
