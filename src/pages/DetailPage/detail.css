@@ -28,8 +28,8 @@ body {
 }
 
 .infoContainer > p {
-    margin: 5% 1% 1% 0;
-    font-size: 20px;
+    margin: 2% 1% 1% 0;
+    font-size: 18px;
     text-align:justify;
 }
 
@@ -58,4 +58,22 @@ body {
     font-size: 12px;
     color: aliceblue;
     background-color:brown;
+}
+
+#addMyListButton {
+    padding: 10px;
+    margin-top: 2%;
+    width: 100%;
+    justify-content: center;
+    font-weight: bold;
+    transition: 500ms;
+    color: aliceblue;
+    background-color:brown;
+    border: none;
+}
+
+#addMyListButton:hover{
+    color: aliceblue;
+    background-color: rgba(165, 42, 42, 0.5);
+    cursor: pointer;
 }

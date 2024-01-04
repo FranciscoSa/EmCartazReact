@@ -54,6 +54,10 @@ function DetailPage(){
                 
                 <p> { movieDetail.overview } </p>
 
+                <button id="addMyListButton">Adiconar a Minha lista</button>
+                
+                <a href="#"></a>
+
             </div>
 
         </div>
