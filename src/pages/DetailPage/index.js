@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { getMovieDetail } from "../../services/repository";
 import "./detail.css"
 
 function DetailPage(){
     const { id } = useParams();
     const [movieDetail, setMovieDetail] = useState();
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function getDetailMovie() {
@@ -23,8 +24,8 @@ function DetailPage(){
                 <h1> Carregando Filmes ... </h1>
             </div>
         );
-    } else if (movieDetail.id === 'erro') {
-       
+    } else if (movieDetail.id === null) {
+        navigate("/", { replace: true})
     }
 
     return(
@@ -56,8 +57,7 @@ function DetailPage(){
 
                 <button id="addMyListButton">Adiconar a Minha lista</button>
                 
-                <a href="#"></a>
-
+                <a href="#" id="goToTrailer">Trailer</a>
             </div>
 
         </div>

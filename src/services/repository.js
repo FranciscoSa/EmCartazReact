@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { redirect } from 'react-router-dom'
 
 // URL base: https://api.themoviedb.org/3
 // API key: api_key=146e18d192e063b3f30d264301c8cb27
@@ -53,7 +52,7 @@ export async function getMovieDetail(id) {
         });
 
     }).catch((error)=>{
-        
+        console.log(`Ouve um erro ao carregar o filme id -> ${ id }, ${ error } `);
     })
    
     return detailMovie
