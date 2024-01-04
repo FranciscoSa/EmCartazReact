@@ -18,11 +18,6 @@ function DetailPage(){
         getDetailMovie();
     }, []);
 
-    function saveMovieOnfavoriteList() {
-        const isSave = saveMovie(movieDetail)
-        alert(isSave ? "Filme salvo na sua lista" : "Não foi possivel salvar o filme na")
-    }
-
     if (loading) {
         return (
             <div className='loadContainer'>
@@ -61,7 +56,7 @@ function DetailPage(){
                 
                 <p> { movieDetail.overview } </p>
 
-                <button id="addMyListButton" onClick={ saveMovieOnfavoriteList }>Adiconar a Minha lista</button>
+                <button id="addMyListButton" onClick={ ()=>{ saveMovie(movieDetail) } }>Adiconar a Minha lista</button>
                 
                 <a target="blank" 
                     rel="external" 

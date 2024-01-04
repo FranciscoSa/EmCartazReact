@@ -4,18 +4,20 @@ body {
     width: 100%;
 }
 
-.container {
+.containerHome {
     margin: 0 auto;
     margin-top: 1%;
     display: flex;
     flex-wrap: wrap;
     max-width: 98%;
     text-align: center;
+    justify-content: center;
     
 }
 
-.movieBox {
-    flex: 1 1 400px;
+.movieBoxHome {
+    /* flex: 1 1 400px; */
+    max-width: 410px;
     margin: 1%;
     border-radius: 2%;
     padding: 5px;
@@ -23,7 +25,7 @@ body {
     box-shadow: 1px 1px 20px rgba(82, 75, 75, 0.507);
 }
 
-.movieTitle {
+.movieTitleHome {
     max-width: 90%;
     white-space: nowrap;
     overflow: hidden;
@@ -33,27 +35,51 @@ body {
     color: brown;
 }
 
-.movieImage {
+.movieImageHome {
     margin: 10px auto 0px auto;
     max-width: 100%;
     display: block;
 }
 
-.movieButton {
+.buttonGroupHome {
     display: flex;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.movieButtonHome {
+    padding: 20px;
+    width: 50%;
+    height: 100%;
     justify-content: center;
-    align-items: center;
-    margin: 0px auto 2% auto;
     font-weight: bold;
+    font-size: 14px;
+    transition: 500ms;
+    color: aliceblue;
+    background-color: rgb(168, 160, 160);
     text-decoration: none;
+}
+
+.movieButtonHome:hover{
+    color: brown;
+    background-color:rgba(189, 185, 185, 0.658);
+}
+
+.addMyListButtonHome {
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
     transition: 500ms;
     color: aliceblue;
     background-color:brown;
-    
+    border: none;
 }
 
-.movieButton:hover{
+.addMyListButtonHome:hover {
     color: aliceblue;
-    background-color: rgba(165, 42, 42, 0.5);
+    background-color:  rgba(165, 42, 42, 0.76);
+    cursor: pointer;
 }

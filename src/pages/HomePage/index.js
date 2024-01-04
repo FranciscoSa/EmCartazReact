@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getMoviesList } from '../../services/repository';
+import { getMoviesList, saveMovie, getMovieDetail } from '../../services/repository';
 import "./home.css";
 
 function Home() {
@@ -17,6 +17,11 @@ function Home() {
         setMoviesData()
     }, []);
 
+    async function saveMovieOnfavoriteList(id) {
+        const movieDetail = await getMovieDetail(id)
+        saveMovie(movieDetail)
+    }
+
     if (loading) {
         return (
             <div className='loadContainer'>
@@ -26,14 +31,20 @@ function Home() {
     }
 
     return (
-        <div className='container'>
+        <div className='containerHome'>
             {
                 movies.map((movie) => {
                     return (
-                        <article key={movie.id} className='movieBox'>
-                            <p className='movieTitle'> {movie.title} </p>
-                            <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} className='movieImage' alt={movie.title} />
-                            <Link to={`/detail/${movie.id}`} className='movieButton'> Saiba Mais </Link>
+                        <article key={movie.id} className='movieBoxHome'>
+                            <p className='movieTitleHome'> {movie.title} </p>
+                            
+                            <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} className='movieImageHome' alt={movie.title} />
+                    
+                            <div className="buttonGroupHome">
+                                <Link to={`/detail/${movie.id}`} className='movieButtonHome'> Saiba Mais </Link>
+                                <button className="addMyListButtonHome" onClick={() => saveMovieOnfavoriteList(movie.id)}>Adicionar a lista</button>
+                            </div>
+
                         </article>
                     )
                 })

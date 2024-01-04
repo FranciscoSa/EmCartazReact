@@ -5,17 +5,18 @@ body {
 }
 
 .container {
-    margin: 0 auto;
-    margin-top: 1%;
+    margin: 1% auto;
     display: flex;
     flex-wrap: wrap;
     max-width: 98%;
     text-align: center;
+    justify-content: center;
     
 }
 
 .movieBox {
-    flex: 1 1 400px;
+    /* flex: 1 1 400px; */
+    max-width: 400px;
     margin: 1%;
     border-radius: 2%;
     padding: 5px;
@@ -39,21 +40,45 @@ body {
     display: block;
 }
 
-.movieButton {
+.buttonGroup {
     display: flex;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.movieButton {
+    padding: 20px;
+    width: 50%;
+    height: 100%;
     justify-content: center;
-    align-items: center;
-    margin: 0px auto 2% auto;
     font-weight: bold;
-    text-decoration: none;
+    font-size: 14px;
     transition: 500ms;
     color: aliceblue;
-    background-color:brown;
-    
+    background-color: rgb(168, 160, 160);
+    text-decoration: none;
 }
 
 .movieButton:hover{
+    color: brown;
+    background-color:rgba(189, 185, 185, 0.658);
+}
+
+.addMyListButton {
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 500ms;
     color: aliceblue;
-    background-color: rgba(165, 42, 42, 0.5);
+    background-color:brown;
+    border: none;
+}
+
+.addMyListButton:hover {
+    color: aliceblue;
+    background-color:  rgba(165, 42, 42, 0.76);
+    cursor: pointer;
 }

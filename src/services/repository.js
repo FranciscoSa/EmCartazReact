@@ -74,5 +74,5 @@ export function saveMovie(movieDetail) {
 
     } 
 
-    return !isMovieAlreadySaved
+    return alert (!isMovieAlreadySaved ? "Filme salvo na sua lista com sucesso !!" : "Este filme já esta na sua lista !!")
 }

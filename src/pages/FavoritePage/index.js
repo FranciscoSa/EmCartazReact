@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
+import "./favorite.css"
 
 function FavoritePage(){
     const [movies, setMovies] = useState([]);
@@ -31,7 +32,10 @@ function FavoritePage(){
                     <article key={movie.id} className='movieBox'>
                         <p className='movieTitle'> {movie.title} </p>
                         <img src={`https://image.tmdb.org/t/p/original/${movie.url_poster}`} className='movieImage' alt={movie.title} />
-                        <Link to={`/detail/${movie.id}`} className='movieButton'> Saiba Mais </Link>
+                        <div className="buttonGroup">
+                            <Link to={`/detail/${movie.id}`} className='movieButton'> Saiba Mais </Link>
+                            <button className="addMyListButton">Remover da lista</button>
+                        </div>
                     </article>
                 )
             })
