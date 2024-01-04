@@ -53,7 +53,7 @@ export async function getMovieDetail(id) {
         });
 
     }).catch((error)=>{
-       detailMovie.id = 'erro'
+        
     })
    
     return detailMovie
