@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .detailContainer {
@@ -28,24 +29,22 @@ body {
 
 .infoContainer > p {
     margin: 5% 1% 1% 0;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align:justify;
 }
 
-#titleGroup {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#titleGroup > h1 {
-    font-family: Arial, Helvetica, sans-serif;
+#titleLabel {
     font-size: 25px;
 }
 
-#titleGroup > h2 {
-    font-family: Arial, Helvetica, sans-serif;
+#voteGroup {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+#voteGroup > h2 {
+    margin: 0 12px 0 0;
     font-size: 12px;
 }
 

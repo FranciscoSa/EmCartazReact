@@ -34,10 +34,7 @@ function DetailPage(){
             
             <div className="infoContainer">
 
-                <article id="titleGroup"> 
-                    <h1>{ movieDetail.title }</h1>
-                    <h2>{ `Nota: ${ movieDetail.vote_average } / Avaliações: ${movieDetail.vote_count}` }</h2>
-                </article>
+                <h1 id="titleLabel">{ movieDetail.title }</h1>
                 
                 <div id="movieGenres">
                     {
@@ -47,6 +44,12 @@ function DetailPage(){
                             )
                         })
                     }
+
+                    <div id="voteGroup">
+                        <h2>{ `Nota: ${ movieDetail.vote_average } / 10 `}</h2>
+                        <h2>{ `Avaliações: ${movieDetail.vote_count}`}</h2>
+                    </div>
+
                 </div>
                 
                 <p> { movieDetail.overview } </p>
