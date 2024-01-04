@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { getMovieDetail } from "../../services/repository";
+import { getMovieDetail, saveMovie } from "../../services/repository";
 import "./detail.css"
 
 function DetailPage(){
@@ -18,6 +18,11 @@ function DetailPage(){
         getDetailMovie();
     }, []);
 
+    function saveMovieOnfavoriteList() {
+        const isSave = saveMovie(movieDetail)
+        alert(isSave ? "Filme salvo na sua lista" : "Não foi possivel salvar o filme na")
+    }
+
     if (loading) {
         return (
             <div className='loadContainer'>
@@ -28,10 +33,11 @@ function DetailPage(){
         navigate("/", { replace: true})
     }
 
+
     return(
         <div className="detailContainer">
 
-            <img id="movieImage" src={ movieDetail.url } alt= {movieDetail.title} />
+            <img id="movieImage" src={ movieDetail.url_banner } alt= {movieDetail.title} />
             
             <div className="infoContainer">
 
@@ -55,9 +61,12 @@ function DetailPage(){
                 
                 <p> { movieDetail.overview } </p>
 
-                <button id="addMyListButton">Adiconar a Minha lista</button>
+                <button id="addMyListButton" onClick={ saveMovieOnfavoriteList }>Adiconar a Minha lista</button>
                 
-                <a href="#" id="goToTrailer">Trailer</a>
+                <a target="blank" 
+                    rel="external" 
+                    href= {`https://youtube.com/results?search_query= ${ movieDetail.title } Trailer `} 
+                    id="goToTrailer">Trailer</a>
             </div>
 
         </div>

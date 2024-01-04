@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import Home from "../../pages/HomePage";
 import DetailPage from "../../pages/DetailPage";
 import ErrorPage from "../../pages/ErroPage";
-import SeeLaterPage from "../../pages/SeeLaterPage"
+import FavoritePage from "../../pages/FavoritePage"
 
 
 function RouterApp() {
@@ -15,7 +15,7 @@ function RouterApp() {
             <Routes>
                 <Route path="/" element= { <Home/> } />
                 <Route path="/detail/:id" element= { <DetailPage/> } />
-                <Route path="/later" element= { <SeeLaterPage/> } />
+                <Route path="/favorite" element= { <FavoritePage/> } />
                 <Route path="*" element= { <ErrorPage/> } />
             </Routes>
         </BrowserRouter>
