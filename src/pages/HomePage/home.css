@@ -83,3 +83,30 @@ body {
     background-color:  rgba(165, 42, 42, 0.76);
     cursor: pointer;
 }
+
+.loadContainerHome {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    color: brown;
+    font-size: 25px
+}
+
+.loaderHome {
+    height: 100px;
+    width: 100px;
+    border: 6px solid rgb(161, 165, 168);
+    border-top-color: brown;
+    border-radius: 50%;
+    animation: is-rotating 0.8s infinite;
+}
+
+@keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+}

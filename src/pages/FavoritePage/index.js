@@ -21,8 +21,9 @@ function FavoritePage(){
 
     if (loading) {
         return (
-            <div className='loadContainer'>
-                <h1>Carregando Filmes ...</h1>
+            <div className='loadContainerFavoriteList'>
+                <div class="loaderFavoriteList "></div>
+                <h1>Carregando Filmes</h1>
             </div>
         );
     } else if (movies.length == 0) {
