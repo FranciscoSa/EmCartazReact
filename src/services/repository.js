@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from "react-toastify"
 
 // URL base: https://api.themoviedb.org/3
 // API key: api_key=146e18d192e063b3f30d264301c8cb27
@@ -54,7 +55,7 @@ export async function getMovieDetail(id) {
         });
 
     }).catch((error)=>{
-        console.log(`Ouve um erro ao carregar o filme id -> ${ id }, ${ error } `);
+        toast.error(`Ouve um erro ao carregar os detalhes desse filme`);
     })
    
     return detailMovie
@@ -74,15 +75,15 @@ export function saveMovie(movieDetail) {
 
     } 
 
-    return alert (!isMovieAlreadySaved ? "Filme salvo na sua lista com sucesso !!" : "Este filme já esta na sua lista !!")
+    return !isMovieAlreadySaved ?  toast.success("Filme salvo na sua lista com sucesso.") : toast.warn("Este filme já esta na sua lista.");
 }
 
 export function updateFavoriteList(favoriteList, movieId) {
     const newFavoriteList = favoriteList.filter((movie) => movie.id !== movieId);
 
     localStorage.setItem("@EmCartazFavorite", JSON.stringify(newFavoriteList));
-
-    alert("Filme removido com sucesso da lista!");
+    
+    toast.success(" Filme removido com sucesso da lista.");
 
     return newFavoriteList;
 }

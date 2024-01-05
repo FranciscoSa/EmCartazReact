@@ -16,7 +16,7 @@ function DetailPage(){
         }
 
         getDetailMovie();
-    }, []);
+    }, [id]);
 
     if (loading) {
         return (

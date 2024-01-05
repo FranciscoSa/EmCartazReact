@@ -49,7 +49,7 @@ function FavoritePage(){
                             <img src={`https://image.tmdb.org/t/p/original/${movie.url_poster}`} className='movieImage' alt={movie.title} />
                             <div className="buttonGroup">
                                 <Link to={`/detail/${movie.id}`} className='movieButton'> Saiba Mais </Link>
-                                <button className="addMyListButton" onClick={() => {setMovies(updateFavoriteList(movies, movie.id))}}>
+                                <button className="addMyListButton" onClick={() => { setMovies(updateFavoriteList(movies, movie.id)) }}>
                                     Remover da lista
                                 </button>
                             </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getMoviesList, saveMovie, getMovieDetail } from '../../services/repository';
+import { toast } from "react-toastify";
 import "./home.css";
 
 function Home() {
@@ -33,7 +34,7 @@ function Home() {
 
     return (
         <div className='containerHome'>
-            {
+            { 
                 movies.map((movie) => {
                     return (
                         <article key={movie.id} className='movieBoxHome'>
