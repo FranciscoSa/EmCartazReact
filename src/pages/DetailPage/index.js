@@ -20,8 +20,9 @@ function DetailPage(){
 
     if (loading) {
         return (
-            <div className='loadContainer'>
-                <h1> Carregando Filmes ... </h1>
+            <div className='loadContainerDetailPage'>
+                <div class="loaderDetailPage"></div>
+                <h1> Carregando Detalhes </h1>
             </div>
         );
     } else if (movieDetail.id === null) {
