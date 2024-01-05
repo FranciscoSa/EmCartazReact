@@ -18,18 +18,18 @@ header {
 }
 
 #buttonSeeLater {
-    color: aliceblue;
-    background-color: brown;
     padding: 8px;
     font-size: medium;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
-    border: 2px solid aliceblue;
+    color: aliceblue;
+    background-color: rgb(168, 160, 160);
     transition: 500ms;
+
 }
 
 #buttonSeeLater:hover{
-    color: brown;
-    background-color:aliceblue;
+    color: rgb(255, 255, 255);
+    background-color:rgba(189, 185, 185, 0.658);
 }

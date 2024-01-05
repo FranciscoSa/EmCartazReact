@@ -25,7 +25,7 @@ function DetailPage(){
             </div>
         );
     } else if (movieDetail.id === null) {
-        navigate("/", { replace: true})
+        navigate("/", { replace: true })
     }
 
 

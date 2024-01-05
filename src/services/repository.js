@@ -76,3 +76,13 @@ export function saveMovie(movieDetail) {
 
     return alert (!isMovieAlreadySaved ? "Filme salvo na sua lista com sucesso !!" : "Este filme já esta na sua lista !!")
 }
+
+export function updateFavoriteList(favoriteList, movieId) {
+    const newFavoriteList = favoriteList.filter((movie) => movie.id !== movieId);
+
+    localStorage.setItem("@EmCartazFavorite", JSON.stringify(newFavoriteList));
+
+    alert("Filme removido com sucesso da lista!");
+
+    return newFavoriteList;
+}
